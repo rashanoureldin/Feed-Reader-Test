@@ -68,7 +68,9 @@ $(function() {
                 loadFeed(1,done);
             });
         });
+        newFeed = $('.feed').html();
         expect(oldFeed).not.toBe(newFeed);
+        
     });
         
 }());
