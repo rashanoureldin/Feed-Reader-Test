@@ -29,18 +29,18 @@ $(function() {
     describe('The menu',function(){
 
         it('The menu element is hidden',function(){
-            expect($('body').hasClass('menu-hidden').toEqual(true);
+            expect($('body').hasClass('menu-hidden')).toEqual(true);
         });
 
          it('Toggle on click',function(){
             $('.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden').toBe(false);
+            expect($('body').hasClass('menu-hidden')).toBe(false);
             $('.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden').toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
     });
-
+e
 
     /* Initial Entries */
 
@@ -52,7 +52,7 @@ $(function() {
             });
         });
         it('define if there is at least 1 entry ', function() {
-            expect($('.entry .feed')).toBeDefined();
+            expect($('.feed .entry')).toBeDefined();
         });
     });
 
