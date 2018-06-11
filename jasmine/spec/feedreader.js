@@ -28,17 +28,15 @@ $(function() {
 
     describe('The menu',function(){
 
-        var element = document.querySelector('body');
         it('The menu element is hidden',function(){
-            expect(element.classList.contains('menu-hidden')).toEqual(true);
+            expect($('body').hasClass('menu-hidden').toEqual(true);
         });
 
          it('Toggle on click',function(){
-            $link = $('a.menu-icon-link');
-            $link.click();
-            expect(element.classList.contains('menu-hidden')).toBe(false);
-            $link.click();
-            expect(element.classList.contains('menu-hidden')).toBe(true);
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden').toBe(false);
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden').toBe(true);
         });
 
     });
@@ -49,11 +47,12 @@ $(function() {
     describe('Intial Entries', function(){
 
         beforeEach(function(done){
-            loadFeed(0 , done);
+            loadFeed(0 , function(){
+                done();
+            });
         });
         it('define if there is at least 1 entry ', function() {
-            expect($('.entry').length).toBeGreaterThan(0);
-            
+            expect($('.entry .feed')).toBeDefined();
         });
     });
 
